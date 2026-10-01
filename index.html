@@ -121,5 +121,27 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <script src="payload.js"></script>
   <script type="module" src="./alert.mjs"></script>
+  
+<audio id="bgMusic" autoplay loop>
+    <source src="./planet-music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+music.volume = 0.35;
+
+window.addEventListener("load", function() {
+    music.play().catch(() => {});
+});
+
+document.addEventListener("click", function() {
+    music.play().catch(() => {});
+}, { once: true });
+
+document.addEventListener("touchstart", function() {
+    music.play().catch(() => {});
+}, { once: true });
+</script>
+
 </body>
 </html>
